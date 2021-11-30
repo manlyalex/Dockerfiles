@@ -7,7 +7,7 @@ RUN ["sed", "-i", "s/exec \"$@\"/echo \"not running $@\"/", "/usr/local/bin/dock
 # needed for intialization
 ENV MYSQL_ROOT_PASSWORD=root
 
-COPY moneyman.cnf /etc/mysql/mysql.conf.d/
+COPY mysql.cnf /etc/mysql/mysql.conf.d/
 
 # Note: copy mysql.sql(with all users) and other databases. Also you need to change name sql dump (example: mysql.sql -> 1.sql, other.sql -> yourname.sql and etc. ) mysql.sql must to initialize first 
 
